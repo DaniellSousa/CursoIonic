@@ -1,12 +1,13 @@
 <ion-view view-title="Home">
+	<ion-nav-buttons side="right">
+		<button class="button button-icon ion-plus" ng-click="modal.show()"></button>
+	</ion-nav-buttons>
+
 	<ion-content class="padding">
-		<div class="list card">
-			<div class="item item-divider">Noidade</div>
-			<div class="item item-body">
-				<div>
-					O Ionic usa o Ui-Route!
-				</div>
-			</div>
-		</div>		
+		<ion-list>
+			<ion-item ng-repeat="item in items">
+				{{item.name}}
+			</ion-item>
+		</ion-list>
 	</ion-content>
 </ion-view>
